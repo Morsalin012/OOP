@@ -2,28 +2,28 @@
 using namespace std;
 class rectangle{
 private:
-    float lenth;
+    float length;
     float width;
 public:
     rectangle(float l,float w){
-        lenth=l;
+        length=l;
         width=w;
     }
     float perameter(){
-        return 2*(lenth+width);
+        return 2*(length+width);
     }
     float area(){
-        return lenth*width;
+        return length*width;
     }
     float getlenth(){
-        return lenth;
+        return length;
     }
     void setlenth(float l){
         if(l>0){
-            lenth=l;
+            length=l;
         }
         else
-            cout<<"The value of lenth should be positive";
+            cout<<"The value of length should be positive";
     }
     float getwidth(){
         return width;
@@ -44,7 +44,7 @@ int main(){
     cin>>q;
     rectangle r(p,q);
     cout<<"The value of area of the rectangle is: "<<r.perameter()<<endl;
-    cout<<"Input the value of new lenth: ";
+    cout<<"Input the value of new length: ";
     cin>>a;
     cout<<"Input the value of new width: ";
     cin>>b;
