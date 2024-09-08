@@ -3,50 +3,39 @@
 using namespace std;
 class emp{
     private:
-    string name;
-    string gmail;
-    float balance;
-    int number;
+    string name[100];
+    string gmail[100];
+    float balance[100];
+    int number[100];
     public:
     int x,i;
-    void insert(string n, string g, float b, int num){
-        name = n;
-        gmail = g;
-        balance = b;
-        number = num;
-    }
     void getdata();
     void display();
 };
 void emp::getdata(){
-    cout<<"Account holders info you want to receive: ";
-    cin>>x;
+    cout << "Enter the number of account holders: ";
+    cin >> x;
     for(i=0; i<x; i++){
         cout << "Enter details for account holder " << (i + 1) << ":" << endl;
         cout<<"Name: ";
-        cin>>name;
+        cin>>name[i];
         cout<<"Gmail: ";
-        cin>>gmail;
+        cin>>gmail[i];
         cout<<"Balance: ";
-        cin>>balance;
+        cin>>balance[i];
         cout<<"Number: ";
-        cin>>number;
+        cin>>number[i];
     }
 }
 void emp::display(){
     for(i=0; i<x; i++){
-        cout << "Details for Account holder " << (i + 1) << ":" << endl;
-        cout << "Name: " << name << ", Gmail: " << gmail<< ", Balance: " << balance << ", Number: " 
-        <<number << endl;
+        cout<<"Details for Account holder "<<(i + 1)<<":" << endl;
+        cout<<"Name: "<<name[i]<<", Gmail: "<<gmail[i]<< ", Balance: "<<balance[i]<< ", Number: " 
+        <<number[i]<<endl;
     }
 }
 int main(void){
     emp e;
-    string name;
-    string gmail;
-    float balance;
-    int number;
-    e.insert(name,gmail,balance,number);
     e.getdata();
     e.display();
     return 0;
