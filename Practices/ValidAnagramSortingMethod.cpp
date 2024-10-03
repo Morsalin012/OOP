@@ -1,4 +1,4 @@
-//Valid Anagram
+//Valid Anagram Using Sorting Method
 #include<iostream>
 #include<algorithm>
 using namespace std;
